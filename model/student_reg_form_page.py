@@ -80,7 +80,8 @@ class StudentRegFormPage:
         browser.element('#submit').click()
 
     @allure.step('Checking the completed data')
-    def should_registered_student_with(self, full_name, email, gender, mobile, date_of_birth, subjects, hobbies, picture, address, state_and_city):
+    def should_registered_student_with(self, full_name, email, gender, mobile, date_of_birth, subjects, hobbies,
+                                       picture, address, state_and_city):
         browser.element('.table').all('td').should(have.texts(
             'Student Name', full_name,
             'Student Email', email,

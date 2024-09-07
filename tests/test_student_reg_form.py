@@ -31,8 +31,8 @@ def test_student_reg_form():
     registration_page.click_submit_button()
 
     registration_page.should_registered_student_with('John Dou', 'JohnDou@test.com', 'Male', '1234567890',
-                                                    '13 April,1985',
-                                                    'Maths', 'Sport', 'photo.jpg', 'Some Street, some house',
-                                                    'Uttar Pradesh Lucknow')
+                                                     '13 April,1985',
+                                                     'Maths', 'Sport', 'photo.jpg', 'Some Street, some house',
+                                                     'Uttar Pradesh Lucknow')
 
     registration_page.close_table()
