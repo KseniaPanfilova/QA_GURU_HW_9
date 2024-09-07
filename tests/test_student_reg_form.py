@@ -26,6 +26,7 @@ def test_student_reg_form():
     registration_page.select_hobby()
     registration_page.upload_photo()
     registration_page.fill_current_address('Some Street, some house')
+    registration_page.scroll_page_to_the_end()
     registration_page.fill_state('Uttar Pradesh')
     registration_page.fill_city('Lucknow')
     registration_page.click_submit_button()

@@ -6,7 +6,7 @@ import tests
 
 
 class StudentRegFormPage:
-
+    @allure.step('Open Student Registration Form')
     def open(self):
         browser.open('/automation-practice-form')
         browser.all('[id^=google_ads][id$=container__]').with_(timeout=10).wait_until(
