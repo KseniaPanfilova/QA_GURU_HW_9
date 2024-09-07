@@ -24,7 +24,7 @@ def browser_configuration():
         options=options)
 
     browser.config.driver = driver
-    browser.config.base_url = 'https://demoqa.com'
+    browser.config.driver.base_url = 'https://demoqa.com'
 
     yield browser
 
