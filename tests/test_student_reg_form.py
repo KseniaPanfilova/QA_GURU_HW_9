@@ -8,7 +8,7 @@ from model.student_reg_form_page import StudentRegFormPage
 @allure.severity(Severity.CRITICAL)
 @allure.label('owner', 'k.panfilova')
 @allure.feature('Student Registration Form')
-@allure.story('filling out and sending the Student Registration Form')
+@allure.story('Filling out and sending the Student Registration Form')
 @allure.link('https://demoqa.com/automation-practice-form', name='Testing form')
 def test_student_reg_form():
     registration_page = StudentRegFormPage()

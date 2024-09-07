@@ -42,7 +42,7 @@ class StudentRegFormPage:
         browser.element(f'.react-datepicker__day--0{day}').click()
 
     def scroll_page_to_the_end(self):
-        browser.execute_script('window.scrollTo(0, document.body.scrollHeight)')
+        browser.driver.execute_script('window.scrollTo(0, document.body.scrollHeight)')
 
     @allure.step('Filling the Subjects input field')
     def fill_subject(self, value):
@@ -51,7 +51,7 @@ class StudentRegFormPage:
     @allure.step('Selecting the Hobbies check-box')
     def select_hobby(self):
         browser.all('#hobbiesWrapper .custom-control-label').element_by(
-            have.attribute('for', 'hobbies-checkbox-1')).click()
+            have.attribute('for').value('hobbies-checkbox-1')).click()
 
     @allure.step('Uploading the photo')
     def upload_photo(self):
