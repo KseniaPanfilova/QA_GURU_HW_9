@@ -1,5 +1,5 @@
 import pytest
-from selene import browser
+from selene import Browser, Config
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -13,7 +13,7 @@ def browser_configuration():
         'browserName': 'chrome',
         'browserVersion': '126.0',
         'selenoid:options': {
-            # 'enableVNC': True,
+            'enableVNC': True,
             'enableVideo': False
         }
     }
@@ -23,7 +23,7 @@ def browser_configuration():
         command_executor=f'https://user1:1234@selenoid.autotests.cloud/wd/hub',
         options=options)
 
-    browser.config.driver = driver
+    browser = Browser(Config(driver))
     browser.config.base_url = 'https://demoqa.com'
 
     yield browser
