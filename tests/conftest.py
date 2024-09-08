@@ -13,7 +13,7 @@ def browser_configuration():
         'browserVersion': '126.0',
         'selenoid:options': {
             'enableVNC': True,
-            'enableVideo': False
+            'enableVideo': True
         }
     }
 
